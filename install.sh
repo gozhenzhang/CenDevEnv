@@ -2,15 +2,15 @@ set -e
 
 ############ Basic: System ##############
 sudo yum install -y epel-release                   # 添加EPEL Repo
-sudo yum update                                 # 更新系统
+sudo yum update  -y                                # 更新系统
 
 
 ############ Basic: Runtime ##############
 sudo yum install -y gcc                            # 安装C编译器
 sudo yum install -y gcc-c++                        # 安装C++编译器
 sudo yum install -y gcc-gfortran                   # 安装Fortran编译器
-#sudo yum install -y compat-gcc-44                  # 兼容gcc 4.4
-#sudo yum install -y compat-gcc-44-c++              # 兼容gcc-c++ 4.4
+#sudo yum install -y compat-gcc-44                 # 兼容gcc 4.4
+#sudo yum install -y compat-gcc-44-c++             # 兼容gcc-c++ 4.4
 
 sudo yum install -y make                           # 安装make
 sudo yum install -y gdb                            # 安装gdb代码调试器        
@@ -22,7 +22,7 @@ sudo yum install -y git                            # 安装git版本控制
 sudo yum install -y p7zip                          # 安装对7z和zip的支持
 sudo yum install -y lrzsz                          # 安装对sz和rz的支持
 sudo yum install -y zsh                            # 安装zsh
-sudo chsh -s $(which zsh)                       # 将zsh设置为默认shell
+sudo chsh -s $(which zsh)                          # 将zsh设置为默认shell
 sudo yum install -y autojump                       # 安装autojump
 sudo yum install -y autojump-zsh                   # 安装autojump对zsh的支持
 
