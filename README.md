@@ -1,7 +1,15 @@
 # CenDevEnv
 A quick way of setting up a basic development environment in CentOS.
 
-###使用方法
+
+
+###Prerequisites
+- CentOS operating system
+- `yum` should be installed
+- `curl` or `wget` should be installed
+
+
+###Using CenDevEnv
 
 ####via curl
 ```shell
@@ -14,5 +22,5 @@ wget https://raw.githubusercontent.com/yan9yu/CenDevEnv/master/install.sh -O - |
 ```
 
 
-###参考资料
+###Reference
 - [SeisMan: 用CentOS 7打造合适的科研环境](http://seisman.info/linux-environment-for-seismology-research.html)

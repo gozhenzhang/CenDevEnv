@@ -1,58 +1,56 @@
 set -e
 
 ############ Basic: System ##############
-sudo yum install -y epel-release                   # 添加EPEL Repo
-sudo yum update  -y                                # 更新系统
+sudo yum install -y epel-release                   # Adding EPEL Repo
+sudo yum update  -y                                # Update system
 
 
 ############ Basic: Runtime ##############
-sudo yum install -y gcc                            # 安装C编译器
-sudo yum install -y gcc-c++                        # 安装C++编译器
-sudo yum install -y gcc-gfortran                   # 安装Fortran编译器
-#sudo yum install -y compat-gcc-44                 # 兼容gcc 4.4
-#sudo yum install -y compat-gcc-44-c++             # 兼容gcc-c++ 4.4
+sudo yum install -y gcc                            # Install C compiler
+sudo yum install -y gcc-c++                        # Install C++ compiler
+sudo yum install -y gcc-gfortran                   # Install Fortran compiler
 
-sudo yum install -y make                           # 安装make
-sudo yum install -y gdb                            # 安装gdb代码调试器        
-sudo yum install -y cmake                          # 安装cmake
-sudo yum install -y git                            # 安装git版本控制
+sudo yum install -y make                           # Install make tool
+sudo yum install -y gdb                            # Install gdb debug tool
+sudo yum install -y cmake                          # Install cmake tool
+sudo yum install -y git                            # Install git version control tool
 
 
 ############ Basic: Tools ################
-sudo yum install -y p7zip                          # 安装对7z和zip的支持
-sudo yum install -y lrzsz                          # 安装对sz和rz的支持
-sudo yum install -y zsh                            # 安装zsh
-sudo chsh -s $(which zsh)                          # 将zsh设置为默认shell
-sudo yum install -y autojump                       # 安装autojump
-sudo yum install -y autojump-zsh                   # 安装autojump对zsh的支持
+sudo yum install -y p7zip                          # Install support to .7z or .zip file
+sudo yum install -y lrzsz                          # Install support to sz and rz command
+sudo yum install -y zsh                            # Install zsh 
+sudo chsh -s $(which zsh)                          # Set zsh as the default shell
+sudo yum install -y autojump                       # Install autojump
+sudo yum install -y autojump-zsh                   # Install autojump for zsh
 
 
 ############ Advanced: Java ##############
-sudo yum install -y java                           # 安装Java运行环境
+sudo yum install -y java                           # Install Java runtime
 
 
 ########### Advanced: Python #############
-sudo yum install -y python-pip                     # 安装Python库安装工具pip
-sudo yum install -y python-matplotlib              # 安装matplotlib会图库
-sudo yum install -y numpy                          # 安装numpy数组操作库
-sudo yum install -y scipy                          # 安装scipy科学计算库
-sudo yum install -y python-requests                # 安装requests网页请求库
-sudo yum install -y python-lxml                    # 安装lxml网页解析库
-sudo yum install -y python-beautifulsoup4          # 安装BeautifulSoup网页解析库
-sudo yum install -y python-docopt                  # 安装docopt命令行解析库
-sudo yum install -y python-argparse                # 安装argparse命令行解析库
-sudo yum install -y ipython                        # 安装iPython运行环境
+sudo yum install -y python-pip                     # Install Python pip package tool 
+sudo yum install -y python-matplotlib              # Install Matplotlib drawing library
+sudo yum install -y numpy                          # Install Numpy matrix calculation library
+sudo yum install -y scipy                          # Install Scipy scientific calculation library
+sudo yum install -y python-requests                # Install Requests webpage library
+sudo yum install -y python-lxml                    # Install lxml webpage analyse library
+sudo yum install -y python-beautifulsoup4          # Install BeautifulSoup webpage analyse library
+sudo yum install -y python-docopt                  # Install Docopt commandline library
+sudo yum install -y python-argparse                # Install Argparse commandline library
+sudo yum install -y ipython                        # Install iPython runtime
 
 
 ########### Advanced: PHP ################
-sudo yum install -y php                            # 安装PHP
-sudo yum install -y php-mysql                      # 安装MySQL的PHP支持
-sudo yum install -y php-fpm                        # 安装php-fpm
-sudo yum install -y php-redis                      # 安装Redis的PHP支持
+sudo yum install -y php                            # Install PHP
+sudo yum install -y php-mysql                      # Install MySQL support for PHP
+sudo yum install -y php-fpm                        # Install PHP-fpm
+sudo yum install -y php-redis                      # Install Redis support for PHP
 
 
 ############ Advanced: Tools #############
-sudo yum install -y httpd                          # 安装Apache服务器
-sudo yum install -y redis                          # 安装Redis
-sudo yum install -y mysql-server                   # 安装MySQL数据库
-sudo yum install -y mongodb                        # 安装Mongo数据库
+sudo yum install -y httpd                          # Install Apache server
+sudo yum install -y redis                          # Install Redis
+sudo yum install -y mysql-server                   # Install MySQL database server
+sudo yum install -y mongodb                        # Install Mongodb database server
