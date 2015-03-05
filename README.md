@@ -5,12 +5,12 @@ A quick way of setting up a basic development environment in CentOS.
 
 ####via curl
 ```shell
-curl -L https://raw.github.com/yan9yu/CenDevEnv/master/install.sh | sh
+curl -L https://raw.githubusercontent.com/yan9yu/CenDevEnv/master/install.sh | sh
 ```
 
 ####via wget
 ```shell
-wget https://raw.github.com/yan9yu/CenDevEnv/master/install.sh -O - | sh
+wget https://raw.githubusercontent.com/yan9yu/CenDevEnv/master/install.sh -O - | sh
 ```
 
 

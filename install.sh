@@ -9,8 +9,8 @@ sudo yum update                                 # 更新系统
 sudo yum install gcc                            # 安装C编译器
 sudo yum install gcc-c++                        # 安装C++编译器
 sudo yum install gcc-gfortran                   # 安装Fortran编译器
-sudo yum install compat-gcc-44                  # 兼容gcc 4.4
-sudo yum install compat-gcc-44-c++              # 兼容gcc-c++ 4.4
+#sudo yum install compat-gcc-44                  # 兼容gcc 4.4
+#sudo yum install compat-gcc-44-c++              # 兼容gcc-c++ 4.4
 
 sudo yum install make                           # 安装make
 sudo yum install gdb                            # 安装gdb代码调试器        
