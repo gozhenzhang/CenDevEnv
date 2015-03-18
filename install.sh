@@ -1,9 +1,25 @@
 set -e
 
 ############ Basic: System ##############
-function basic_system()
+function basic_epel_repo()
 {
     yum install -y epel-release                   # Adding EPEL Repo
+}
+
+
+function basic_163_repo()
+{
+    version=`lsb_release -a | grep "CentOS release" | awk -F" " '{print $4}' | awk -F"." '{print $1}'`             # Get CentOS system version
+    mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bk                                      # Backup original repo file
+    url="http://mirrors.163.com/.help/CentOS$version-Base-163.repo"
+    wget $url -O /etc/yum.repos.d/CentOS-Base.repo                                                                 # Get 163 repo
+}
+
+
+function sys_update()
+{
+    yum clean all                                 # Clean all and make new cache
+    yum makecache
     yum update  -y                                # Update system
 }
 
@@ -76,11 +92,21 @@ function adv_tools()
 
 ################## Main Process #####################
 
-echo -n "Install Basic System Support (y/N)? "
-read is_basic_system
-if [ $is_basic_system == "y" ];then
-    basic_system
+echo -n "Install EPEL Repo Support (y/N)? "
+read is_basic_epel_repo
+if [ $is_basic_epel_repo == "y" ];then
+    basic_epel_repo
 fi
+
+echo -n "Install 163 Repo Support (y/N)? "
+read is_basic_163_repo
+if [ $is_basic_163_repo == "y" ];then
+    basic_163_repo
+fi
+
+echo "Update System"
+sys_update
+
 
 echo -n "Install Basic Runtime Support (y/N)? "
 read is_basic_runtime
